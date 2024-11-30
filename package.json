@@ -1,0 +1,49 @@
+{
+  "name": "ctp-components",
+  "version": "1.0.0",
+  "description": "crazy-tea-party components",
+  "main": "dist/ctp.all.js",
+  "scripts": {
+    "build": "node_modules\\.bin\\webpack",
+    "build:local": "set MODE=local && npm run build",
+    "build:dev": "set MODE=dev && npm run build",
+    "build:qa": "set MODE=qa && npm run build",
+    "start": "npm run dev && lite-server",
+    "dev": "set MODE=dev && npm run build",
+    "test": "echo run test..",
+    "watch": "set MODE=dev && webpack -w",
+    "build:ci": "npm install && npm run build",
+    "version": "npm version --allow-same-version "
+  },
+  "_moduleAliases": {
+    "@": "src/components"
+  },
+  "author": "Alexander Shachnev",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.8",
+    "copy-webpack-plugin": "^12.0.2",
+    "esbuild-loader": "^4.2.2",
+    "js-cookie": "^3.0.5",
+    "jsdom": "^25.0.1",
+    "json2typescript": "^1.5.1",
+    "module-alias": "^2.2.3",
+    "ramda": "^0.30.1"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.10.0",
+    "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
+    "lite-server": "^2.6.1",
+    "node-fetch": "^3.3.2",
+    "path": "^0.12.7",
+    "prettier": "^3.4.1",
+    "raw-loader": "^4.0.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
